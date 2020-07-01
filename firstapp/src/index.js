@@ -6,10 +6,30 @@ import ReactDOM from 'react-dom'
 
 
 //react components
-const App = function() {
-   return <div>Hii there</div>
+const App = () => {
+
+
+function getButtonText(){
+
+  return 'Click Me';
   
 }
+
+
+
+   return (<div>
+     <label className="label" htmlFor="name">Enter your name:</label>
+     <input name="name" type="text"></input>
+     <button style={{backgroundColor: 'red', color:'white'}}>
+       { getButtonText() }
+     </button>
+
+
+
+
+   </div>);
+  
+};
 
 
 
