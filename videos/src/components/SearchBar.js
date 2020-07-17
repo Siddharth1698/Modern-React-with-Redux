@@ -1,5 +1,7 @@
 import React from 'react';
 
+const KEY = 'AIzaSyAvQ-lu2fotjcjXoKgOXXMv7JkKcFu6B8o';
+
 class SearchBar extends React.Component{
     state= { term : ''};
 
@@ -7,8 +9,11 @@ class SearchBar extends React.Component{
         this.setState({term: event.target.value});
     };
 
+    
+
     onFormSubmit = event =>{
         event.preventDefault();
+        this.props.onFormSubmit(this.state.term);
 
     };
 
