@@ -16,7 +16,8 @@ class App extends React.Component{
                 part: 'snippet',
                 maxResults: 5,
                 type: 'video',
-                key: KEY
+                key: KEY,
+                q:term
             }
         });
 
@@ -31,7 +32,7 @@ class App extends React.Component{
             <SearchBar onFormSubmit={this.onTermSubmit}/>
             <VideoList videos={this.state.videos}/>
             </div>
-        );
+        ); 
     }
 }
 
