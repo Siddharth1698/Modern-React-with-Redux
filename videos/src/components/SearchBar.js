@@ -1,6 +1,6 @@
 import React from 'react';
 
-const KEY = 'AIzaSyAvQ-lu2fotjcjXoKgOXXMv7JkKcFu6B8o';
+
 
 class SearchBar extends React.Component{
     state= { term : ''};
