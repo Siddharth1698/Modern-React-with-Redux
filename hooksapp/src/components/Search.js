@@ -3,7 +3,7 @@ import axios from 'axios';
 
 
 const Search = () =>{
-    const[term,setTerm] = useState('');
+    const[term,setTerm] = useState('programming');
     const[results,setResults] = useState([]);
 
     useEffect(() => {
@@ -30,11 +30,16 @@ const Search = () =>{
     const renderedResults = results.map((result)=>{
         return(
             <div key={result.pageid} className="item">
-                <div className="content">
+                <div className="content right floated content">
+                    <a
+                    href={`https://en.wikipedia.org?curid=${result.pageid}`}
+                    className="ui button">Go</a> </div>
+                    <div className="content">
                     <div className="header">
-                        {result.title}
-                    </div>
-                    {result.snippet}
+                        {result.title}   </div>
+                        <span dangerouslySetInnerHTML={{ __html: result.snippet}}></span>
+                 
+                   
                 </div>
             </div>
         );
